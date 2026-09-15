@@ -1,0 +1,14 @@
+name: Setup Ember
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout deepinthink/ember
+      uses: actions/checkout@v4
+      with:
+        repository: deepinthink/ember
+        path: deepinthink/ember
+
+    - name: Build && Install ember-spring-blockchain
+      shell: bash
+      run: cd deepinthink/ember/infrastructure/framework/java/ember-spring-blockchain && ./mvnw install -B
