@@ -1,0 +1,3 @@
+# Environment Post Processors
+org.springframework.boot.EnvironmentPostProcessor=\
+org.deepinthink.ember.spring.blockchain.env.SpringBlockchainEnvironmentPostProcessor
