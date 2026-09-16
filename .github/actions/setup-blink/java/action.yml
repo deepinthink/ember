@@ -9,6 +9,10 @@ runs:
         repository: deepinthink/ember
         path: deepinthink/ember
 
+    - name: Build && Install ember-specification-benchmark
+      shell: bash
+      run: cd deepinthink/ember/specification/benchmark/java/ember-specification-benchmark && ./mvnw install -B
+
     - name: Build && Install ember-spring-blockchain
       shell: bash
       run: cd deepinthink/ember/infrastructure/framework/java/ember-spring-blockchain && ./mvnw install -B
