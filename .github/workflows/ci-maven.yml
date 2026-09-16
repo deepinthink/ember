@@ -25,3 +25,6 @@ jobs:
 
       - name: Build && Install ember-spring-blockchain-benchmark
         run: cd infrastructure/benchmark/java/ember-spring-blockchain-benchmark && ./mvnw install -B
+
+      - name: Build && Install ember-benchmark
+        run: cd templates/benchmark/java/ember-benchmark && ./mvnw install -B
