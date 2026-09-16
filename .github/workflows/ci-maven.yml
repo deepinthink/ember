@@ -22,3 +22,6 @@ jobs:
 
       - name: Build && Install ember-spring-blockchain
         run: cd infrastructure/framework/java/ember-spring-blockchain && ./mvnw install -B
+
+      - name: Build && Install ember-spring-blockchain-benchmark
+        run: cd infrastructure/benchmark/java/ember-spring-blockchain-benchmark && ./mvnw install -B
