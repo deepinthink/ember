@@ -20,6 +20,9 @@ jobs:
       - name: Setup deepinthink/amoeba
         uses: deepinthink/amoeba/.github/actions/setup-amoeba/java@main
 
+      - name: Build && Install ember-specification-benchmark
+        run: cd specification/benchmark/java/ember-specification-benchmark && ./mvnw install -B
+
       - name: Build && Install ember-spring-blockchain
         run: cd infrastructure/framework/java/ember-spring-blockchain && ./mvnw install -B
 
