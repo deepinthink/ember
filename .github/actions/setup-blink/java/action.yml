@@ -16,3 +16,7 @@ runs:
     - name: Build && Install ember-spring-blockchain-benchmark
       shell: bash
       run: cd deepinthink/ember/infrastructure/benchmark/java/ember-spring-blockchain-benchmark && ./mvnw install -B
+
+    - name: Build && Install ember-benchmark
+      shell: bash
+      run: cd deepinthink/ember/templates/benchmark/java/ember-benchmark && ./mvnw install -B
