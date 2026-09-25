@@ -9,4 +9,7 @@
   </parent>
   <artifactId>benchmark-evm</artifactId>
   <packaging>pom</packaging>
+  <modules>
+    <module>benchmark-evm-besu</module>
+  </modules>
 </project>
