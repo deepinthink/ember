@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  besu:
+    image: hyperledger/besu:latest
+    container_name: ember-besu
+    restart: unless-stopped
+    ports:
+      - "8545:8545"   # HTTP JSON-RPC
+      - "8546:8546"   # WS
+      - "30303:30303" # p2p TCP
+      - "30303:30303/udp" # p2p UDP
+    volumes:
+      - besu-data:/var/lib/besu
+    command:
+      - "--dev"
+      - "--rpc-http-enabled"
+      - "--rpc-http-host=0.0.0.0"
+      - "--rpc-http-port=8545"
+      - "--rpc-http-api=ETH,NET,WEB3,ADMIN,TRACE,DEBUG"
+      - "--rpc-ws-enabled"
+      - "--rpc-ws-host=0.0.0.0"
+      - "--rpc-ws-port=8546"
+      - "--host-allowlist=*"
+      - "--miner-enabled"
+      - "--miner-coinbase=0x0000000000000000000000000000000000000000"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx1g
+
+volumes:
+  besu-data:
