@@ -10,9 +10,8 @@
   <artifactId>ember-specification-benchmark</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>specification-benchmark-chaincode</module>
+    <module>specification-benchmark-contract</module>
     <module>specification-benchmark-dependencies</module>
-    <module>specification-benchmark-evm</module>
     <module>specification-benchmark-parent</module>
   </modules>
   <properties>
