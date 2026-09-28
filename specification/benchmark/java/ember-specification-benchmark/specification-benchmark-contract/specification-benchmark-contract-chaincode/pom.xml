@@ -3,10 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.deepinthink.ember</groupId>
-    <artifactId>specification-benchmark-parent</artifactId>
+    <artifactId>specification-benchmark-contract</artifactId>
     <version>2026.5.0-SNAPSHOT</version>
-    <relativePath>../specification-benchmark-parent/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>specification-benchmark-chaincode</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>specification-benchmark-contract-chaincode</artifactId>
+  <properties>
+    <spotless.license-header.file>${project.basedir}/../../../../../../tools/configs/checkstyle/license-header.txt</spotless.license-header.file>
+  </properties>
 </project>
