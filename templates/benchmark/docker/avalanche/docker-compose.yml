@@ -1,0 +1,24 @@
+services:
+  avalanchego:
+    image: avaplatform/avalanchego:v1.11.5
+    container_name: avalanche-node
+    restart: unless-stopped
+    ports:
+      - "9650:9650" # HTTP/RPC
+      - "9651:9651" # P2P / staking
+    volumes:
+      - avalanche-data:/root/.avalanchego
+    command:
+      - "--network-id=local"
+      - "--public-ip=127.0.0.1"
+      - "--http-host=0.0.0.0"
+      - "--http-port=9650"
+      - "--staking-port=9651"
+      - "--staking-enabled=false"
+      - "--log-level=info"
+      - "--db-dir=/root/.avalanchego/db"
+    environment:
+      - AVALANCHEGO_LOG_LEVEL=info
+
+volumes:
+  avalanche-data:
