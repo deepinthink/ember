@@ -10,4 +10,23 @@
   <groupId>org.deepinthink.ember</groupId>
   <artifactId>benchmark-dependencies</artifactId>
   <packaging>pom</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.deepinthink.ember</groupId>
+        <artifactId>benchmark-evm-fabric</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.deepinthink.ember</groupId>
+        <artifactId>benchmark-evm-avalanche</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.deepinthink.ember</groupId>
+        <artifactId>benchmark-evm-besu</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
