@@ -9,4 +9,7 @@
   </parent>
   <artifactId>benchmark-chaincode</artifactId>
   <packaging>pom</packaging>
+  <modules>
+    <module>benchmark-evm-fabric</module>
+  </modules>
 </project>
